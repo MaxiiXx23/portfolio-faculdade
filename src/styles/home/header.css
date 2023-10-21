@@ -1,0 +1,78 @@
+/* Estilização para a barra de navegação do site */
+
+header.Header {
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    flex-direction: row;
+}
+
+nav.Nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+ul.ListNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+
+    list-style-type: none;
+}
+
+a.NavOption {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+/* Estilização do Link(tag '<a>') para um formato de Button */
+a.ButtonGithub {
+    cursor: pointer;
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  
+    border: 0;
+    box-shadow: none;
+    border-radius: 8px;
+  
+    background: #22c55e;
+  
+    font-weight: bold;
+    color: #fff;
+
+    font-size: 1rem;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* Estilização aplicada caso o mouse seja passado por cima do Button. */
+a.ButtonGithub:hover {
+    opacity: 0.8;
+}
+
+/* Bloco de media queries e breakpoints para aplicar a responsividade */
+
+@media screen and (max-width: 1024px) {
+    nav.Nav {
+        width: 80%;
+    }
+}

@@ -1,0 +1,30 @@
+* {
+    /* Estilização global da aplicação  */
+    margin: 0;
+    padding: 0;
+}
+:focus {
+    /* Aqui limpo(reset) o box-shadow de todos os focus na aplicação */
+    outline: 0;
+    box-shadow: none;
+}
+body{
+    /* Estilização para o body */
+    background: #3b82f6;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+
+}
+
+footer {
+    /* Estilização para o Footer */
+    width: 100%;
+
+    padding: 4rem 0rem; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}

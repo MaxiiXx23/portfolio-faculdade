@@ -1,0 +1,141 @@
+section.banner {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+div.ContainerForm {
+    /* Abaixo utilizo o FlexBox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Aqui uso @keyframes para criar uma animação */
+
+@keyframes animation {
+    0%   { opacity: 0;}
+    25%  { opacity: 0.4;}
+    50%  { opacity: 0.7;}
+    100% { opacity: 1;}
+  }
+
+  img.ImageBanner {
+    width: 40%;
+    height: 50%;
+    /* Animação é utilizado e também algumas configuração são adicionadas a ela. */
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+h5.Title {
+    font-size: 1.5rem;
+}
+
+form.Form {
+    /* Abaixo utilizo o FlexBox */
+    width: 30rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    border: 1px solid #fff;
+    border-radius: 8px;
+  
+    gap: 2rem;
+}
+
+input.Input {
+    width: 70%;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: none;
+  
+    font-weight: bold;
+}
+
+label.Label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+textarea {
+    width: 70% !important;
+    /* Utilizo o resize para evitar que o usuário expanda o tamanho do textarea */
+    resize: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: none;
+  
+    font-weight: bold;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  
+    border: 0;
+    box-shadow: none;
+    border-radius: 8px;
+  
+    background: #22c55e;
+  
+    font-weight: bold;
+    color: #fff;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Bloco de media queries e breakpoints para aplicar a responsividade */
+
+@media screen and (max-width: 1024px) {
+
+    img.ImageBanner {
+        width: 32%;
+        height: 35%;
+    }
+    form.Form {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.banner {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img.ImageBanner {
+        width: 25%;
+        height: 35%;
+    }
+}

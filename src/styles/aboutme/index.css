@@ -1,0 +1,59 @@
+section.bannerAboutMe {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+div.ContainerTexts {
+    width: 40%;
+    /* Abaixo utilizo o FlexBox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Aqui uso @keyframes para criar uma animação */
+
+@keyframes animation {
+    0%   { opacity: 0;}
+    25%  { opacity: 0.4;}
+    50%  { opacity: 0.7;}
+    100% { opacity: 1;}
+  }
+
+  img.ImageBanner {
+    width: 40%;
+    height: 50%;
+    /* Animação é utilizado e também algumas configuração são adicionadas a ela. */
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+
+p {
+    /* Abaixo, estilizo a tag 'p' e em seguida aplicado a animação criada */
+    text-align: justify;
+    line-height: 1.4;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+/* Bloco de media queries e breakpoints para aplicar a responsividade */
+@media screen and (max-width: 768px) {
+    section.bannerAboutMe {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img.ImageBanner {
+        width: 25%;
+        height: 35%;
+    }
+}
